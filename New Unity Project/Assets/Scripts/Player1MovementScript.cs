@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class PlayerMovementScript : MonoBehaviour
+public class Player1MovementScript : MonoBehaviour
 {
     public CharacterController2D controller;
     public Animator animator;
@@ -12,10 +12,10 @@ public class PlayerMovementScript : MonoBehaviour
 
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        horizontalMove = Input.GetAxisRaw("HorizontalPlayer1") * runSpeed;
+
         animator.SetFloat("speed",Mathf.Abs(horizontalMove));
-        Debug.Log(horizontalMove);
-        if(Input.GetButtonDown("Jump")){
+        if(Input.GetKeyDown(KeyCode.W)){
             jump = true;
             StartCoroutine(AnimatorMakeJump());
         }
@@ -24,20 +24,17 @@ public class PlayerMovementScript : MonoBehaviour
     
     void FixedUpdate()
     {
-        Debug.Log("call Fixed update");
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
         jump = false;
     }
 
     public void OnLandPlayer(){
-        
         animator.SetBool("jump",false);
     }
 
     private IEnumerator AnimatorMakeJump()
     {
-        
-        yield return new WaitForSeconds(0.04f);//because instantground check is not taken.
+        yield return new WaitForSeconds(0.04f);
         animator.SetBool("jump",true);
     }
 }
