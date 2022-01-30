@@ -759,6 +759,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 410346596}
+    - target: {fileID: 3876731262359051844, guid: ef9d14a67a57c8f4691196c8af9721fc, type: 3}
+      propertyPath: runSpeed
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 3876731262359051845, guid: ef9d14a67a57c8f4691196c8af9721fc, type: 3}
       propertyPath: m_Name
       value: MalePlayer
@@ -983,6 +987,10 @@ PrefabInstance:
     - target: {fileID: 4724466765782536314, guid: 795a6a16508d1474784fb5f961c5d635, type: 3}
       propertyPath: m_Name
       value: FemalePlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4724466765782536315, guid: 795a6a16508d1474784fb5f961c5d635, type: 3}
+      propertyPath: runSpeed
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 5475502192560348568, guid: 795a6a16508d1474784fb5f961c5d635, type: 3}
       propertyPath: m_SortingLayer
