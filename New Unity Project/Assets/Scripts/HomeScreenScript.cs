@@ -12,12 +12,10 @@ public class HomeScreenScript : MonoBehaviour
         }
     }
     public void GoToGameScene() {  
-        SceneManager.LoadScene("SurajTestScene"); 
-        PlayGame(); 
+        SceneManager.LoadScene("SurajTestScene");  
     }  
     public void GoToHomeScene() {  
-        SceneManager.LoadScene("HomeScene");
-        PlayGame();
+        SceneManager.LoadScene("HomeScreen");  
     }
     public void PlayGame() {
         Time.timeScale = 1;
